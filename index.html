@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Web Audio Spectrum Playground</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+  </head>
+  <body>
+    
+    <!-- This is dynamic up to 32 items, you can have less bars and it will still work -->
+    <div class="spectograph__container">
+        <div class="spectograph__row">
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+            <div class="spectograph__item"></div>
+        </div>    
+    </div>
+    
+    <!-- The audio player -->
+    <audio id="player" class="audioPlayer" src="media/weak_spot.mp3" controls="controls"></audio>
+    
+    <!-- The tween engine and the main script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
