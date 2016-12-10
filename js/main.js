@@ -25,9 +25,6 @@
     // Update loop
     function update() {
         
-        // Setup next animation frame
-        requestAnimationFrame(update);
-
         // Update frequency data based on the streaming audio
         analyser.getByteFrequencyData(frequencyData);
         
@@ -38,9 +35,9 @@
             var val = frequencyData[i*inc]/255;
             
             // Tween the dropshadow to make it look like it pops off the screen
-            TweenMax.to(allGridItems[i], 0.15, {
+            /*TweenMax.to(allGridItems[i], 0.15, {
                 boxShadow:"" + (dropposition) + "px " + (dropposition) + "px " + (val*50) + "px #222", 
-                delay: Math.random()*0.25});
+                delay: Math.random()*0.25});*/
             
             // Scale Y based off the aplitude of the spectrum
             TweenMax.to(allGridItems[i], 0.5, {
@@ -62,6 +59,9 @@
                TweenMax.to(allGridItems[i], 1, {backgroundColor: colour, delay: i*0.05}) 
             }
         }
+        
+        // Setup next animation frame
+        requestAnimationFrame(update);
     };
 
     // Start the animation loop
